@@ -1,11 +1,11 @@
 ## XFS Extract
 
-Scans the raw disk to allow extraction. The utility itself doesn't modify the disk and only opens files for reading.
+Scans a raw disk to allow extraction. The utility itself doesn't modify the disk and only opens files for reading.
 
 If the XFS file system is corrupted then your ability to mount and extract data from it will vary depending on 
 the level of the corruption.
 
-There is some basic check of the superblock checksums to eliminate false positives.
+There is a basic check of the superblock checksums to eliminate false positives.
 
 Root privileges required.
 
