@@ -9,7 +9,7 @@ the level of the corruption.
 
 ## Requirements
 
-pip install ioctl_opt
+`ioctl_opt`
 
 ## Installation
 
