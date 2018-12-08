@@ -2,10 +2,12 @@
 
 Scans the raw disk to allow extraction. The utility itself doesn't modify the disk and only opens files for reading.
 
-Root privileges required.
-
-If the XFS file system is corrupted then your ability to mount it and extract data from it will vary depending on 
+If the XFS file system is corrupted then your ability to mount and extract data from it will vary depending on 
 the level of the corruption.
+
+There is some basic check of the superblock checksums to eliminate false positives.
+
+Root privileges required.
 
 ## Requirements
 
@@ -30,7 +32,7 @@ optional arguments:
 ## How To Use
 
 1. Run `xfs-extract`. See below.
-2. Mount each `XFS found: ` mount a loop device, e.g. `sudo losetup -o 2097152 --sizelimit 214748364800 -b 512 -r -f /dev/nvme0n1`
+2. For each `XFS found:` setup a loop device, e.g. `sudo losetup -o 2097152 --sizelimit 214748364800 -b 512 -r -f /dev/nvme0n1`
 3. Mount XFS via loop device, e.g. `mount -o ro /dev/loop1 /mnt/disk1`
 
 Here's the sample output of the output that you may receive. 
